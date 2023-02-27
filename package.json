@@ -1,0 +1,13 @@
+{
+  "name": "mm-cypress-poc",
+  "version": "1.0.0",
+  "description": "PoC using Cypress to run E2E tests of custom modules running in Magic Mirror",
+  "scripts": {
+    "cy:run": "cypress run"
+  },
+  "author": "ismar@slomic.no",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^12.7.0"
+  }
+}
