@@ -70,10 +70,6 @@ jobs:
           # download all files into "MagicMirror" folder
           path: MagicMirror
 
-      # show directory contents
-      - run: ls -la
-      - run: ls -la dist
-
       # Install MagicMirror dependencies
       - name: Install MagicMirror dependencies 📦
         run: npm run install-mm
@@ -83,6 +79,11 @@ jobs:
       - name: Install custom module dependencies 📦
         run: npm install --omit=dev
         working-directory: MagicMirror/modules/MMM-Hello-World-Ts
+
+      # show directory contents
+      - run: ls -la
+      - run: ls -la MagicMirror
+      - run: ls -la MagicMirror/modules
 
       # Run the Cypress e2e tests
       - name: Cypress run 🧪
