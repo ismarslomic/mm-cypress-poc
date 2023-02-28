@@ -50,6 +50,7 @@ jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     name: Cypress E2E on Node 18
+    needs: magicmirror-setup
     steps:
       # Set version of node to use
       - name: Use Node.js 18
@@ -67,8 +68,9 @@ jobs:
         with:
           name: magicmirror
           # download all files into "MagicMirror" folder
-          path: magiMagicMirrorcmirror
+          path: MagicMirror
 
+      # show directory contents
       - run: ls -la
       - run: ls -la dist
 
