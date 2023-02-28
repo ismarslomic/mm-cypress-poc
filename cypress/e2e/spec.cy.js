@@ -5,7 +5,7 @@ describe('MMM-Hello-World-Ts', () => {
 
   it('greetings message is displayed', () => {
     cy
-      .get('div[id="module_3_MMM-Hello-World-Ts"] > div > div > div[class="bright light medium"]')
+      .get('div[id$="MMM-Hello-World-Ts"] > div > div > div[class="bright light medium"]')
       .should('have.text', 'MMM-Hello-World-Ts says: Hello world Ismar!')
       .should('be.visible')
   })
