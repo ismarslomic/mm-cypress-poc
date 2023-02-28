@@ -28,9 +28,6 @@ jobs:
           path: MagicMirror/modules/MMM-Hello-World-Ts
           ref: main
 
-      # rename the magicmirror config file
-      - run: mv MagicMirror/config/config.js.sample MagicMirror/config/config.js
-
       # show directory contents
       - run: ls -la
       - run: ls -la MagicMirror
@@ -80,9 +77,14 @@ jobs:
         run: npm run install:dep
         working-directory: MagicMirror/modules/MMM-Hello-World-Ts
 
+      # copy the test magicmirror config file
+      - name: Copy test config file for MagicMirror
+        run: cp mm/config.js MagicMirror/config/config.js
+
       # show directory contents
       - run: ls -la
       - run: ls -la MagicMirror
+      - run: ls -la MagicMirror/config
       - run: ls -la MagicMirror/modules
 
       # Run the Cypress e2e tests
