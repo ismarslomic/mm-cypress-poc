@@ -1,4 +1,4 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   e2e: {
@@ -7,4 +7,4 @@ module.exports = defineConfig({
     supportFile: false,
     specPattern: '__tests__/**/*.cy.js',
   },
-});
+})
