@@ -237,5 +237,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-cypress/screenshots
-cypress/videos
+__tests__/screenshots
+__tests__/videos
